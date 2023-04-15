@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link href="style.css" rel="stylesheet"/>
+    <title>Main</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a onclick="reRender()" id="home">HOME</a>
+            <a onclick="darkMode()" id="mode">DARK</a>
+        </nav>
+        <h1>MAIN</h1>
+        <p class="info" id="info"></p>
+    </div>
+    // Initializing function Dark Mode
+    <script>
+        let body = document.body;
+        let info = document.getElementById("info");
+        let mode = document.getElementById("mode");
+        let home = document.getElementById("home");
+
+        const darkLimit = 3;
+        let darkCounter = 0;
+        let darkRemainingleft;
+        
+
+        function darkMode() {
+            if(darkRemainingleft == 1){
+                info.textContent = "Dark Mode LIMIT"
+                mode.style.display = "none";
+                home.textContent = "RELOAD";
+                
+                return
+            }
+            mode.textContent = "LIGHT";
+            
+            
+            darkCounter += 1,0;
+            darkRemainingleft = darkLimit - darkCounter;
+            
+            // console.log("Dark Mode LIMIT")
+            // console.log("dark mode on click time: ', darkCounter");
+            // console.log("kesempatan anda: ", darkRemainingleft);
+            body.classList.toggle("dark");
+
+            // Render ke Info element
+            
+            info.textContent =`Darkmode Used ${darkCounter}x,  Remaining Left ${darkRemainingleft}`
+            
+        
+        }
+        function reRender() {
+            location.reload();
+        }
+        
+    </script>
+</body>
+</html>

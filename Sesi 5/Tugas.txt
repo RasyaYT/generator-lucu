@@ -1,0 +1,10 @@
+TUGAS
+-Javascript LOGIC (Done)
+-Javascript Manip Element (Done)
+-Css Styling (Done)
+
+Studi Kasus:
+1). Fixed Bottom Navigation Baru (Done)
+2). Dark Mode Classlist (CSS JAVASCRIPT) (Done)
+3). Dark Mode Counter (Done)
+
